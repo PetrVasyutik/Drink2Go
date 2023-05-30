@@ -1,0 +1,50 @@
+.site-nav {
+  background-color: $white;
+  text-align: center;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 20px;
+    }
+  }
+
+  .site-nav__item {
+    border-bottom: 1px solid $base-secondary;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+  }
+
+  .site-nav__link {
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+
+    &--active {
+      color: $base-primary;
+      border-bottom: 1px solid $base-primary;
+    }
+
+    &:active {
+      color: $base-primary;
+      background-color: $base-secondary;
+    }
+
+    &:hover {
+      color: $base-primary;
+    }
+
+    &:focus {
+      color: $base-primary;
+    }
+  }
+}

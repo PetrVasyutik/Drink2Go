@@ -1,0 +1,16 @@
+.swiper-scrollbar {
+  display: none;
+}
+
+.swiper {
+  overflow: inherit;
+}
+
+.swiper-button-next--main:after {
+  font-size: 20px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px;
+}

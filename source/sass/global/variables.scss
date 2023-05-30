@@ -1,0 +1,26 @@
+/* здесь используйте глобальные переменные */
+// Colors
+
+$base-black: #333333;
+$white: #ffffff;
+$alabaster: #F8F8F8;
+$base-primary: #7859CF;
+$primary-lighter: #9070EC;
+$primary-darker: #593CAC;
+$base-secondary: #F0EBFF;
+$flat-white: #F3EBE1;
+$base-grey: #BDBDBD;
+$light-grey: #E2E2E2;
+
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$mobile-width-only: $tablet-width - 1px;
+
+
+// Useful vars
+$container-gap: 20px;
+$container-gap-desktop: 40px;
+$section-gap-vertical: 60px;
+$section-gap-vertical-desktop: 100px;

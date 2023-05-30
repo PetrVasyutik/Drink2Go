@@ -1,0 +1,20 @@
+.copyright {
+
+  .copyright__link {
+    color: $base-grey;
+    padding-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    &:hover,
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:active {
+      color: $primary-darker;
+    }
+  }
+}

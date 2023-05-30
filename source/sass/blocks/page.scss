@@ -1,0 +1,22 @@
+.page {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  font-weight: 400;
+  font-family: "Montserrat", "Arial", sans-serif;
+
+  .page__body {
+    min-width: 320px;
+    margin: 0;
+    background-color: $white;
+  }
+
+  .page__wrapper {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-columns: 100%;
+    align-content: center;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,72 @@
+.section {
+  padding: $section-gap-vertical 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 0;
+  }
+
+  &--alabaster {
+    background-color: $alabaster;
+
+    @media (min-width: $tablet-width) {
+      padding: 100px 0;
+      margin-top: 50px;
+    }
+  }
+
+  &--flat-white {
+    background-color: $flat-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: $section-gap-vertical-desktop 0;
+    padding-bottom: 155px;
+  }
+
+  &--map {
+    padding: 0;
+  }
+
+  &--slider {
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: $tablet-width) {
+
+      padding-top: 30px;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        width: 100vw;
+        height: 250px;
+        left: 50%;
+        background: $white;
+      }
+
+      &::before {
+        right: 50%;
+        left: auto;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .section__subtitle {
+    color: $base-primary;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+}

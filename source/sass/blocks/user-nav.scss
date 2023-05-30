@@ -1,0 +1,36 @@
+.user-nav {
+  margin-right: 20px;
+
+  .user-nav__list {
+    display: flex;
+  }
+
+  .user-nav__link {
+    display: flex;
+    gap: 8px;
+    padding: 32px 20px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $base-primary;
+
+    }
+
+    &:focus {
+      color: $base-primary;
+    }
+
+    &:active {
+      color: $base-primary;
+      background-color: $white;
+    }
+  }
+
+  .user-nav__text {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}

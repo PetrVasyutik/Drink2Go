@@ -1,0 +1,51 @@
+.form_radio {
+  margin-bottom: 10px;
+}
+
+.form_radio input[type=radio] {
+  display: none;
+}
+
+.form_radio label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 34px;
+  margin-right: 0;
+  line-height: 18px;
+  user-select: none;
+}
+
+.form_radio .label--disabled {
+  color: $base-grey;
+  cursor: default;
+}
+
+.form_radio label:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='white' stroke='%23BDBDBD' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+/* Checked */
+.form_radio input[type=radio]:checked+label:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='white' stroke='%237859CF' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='8' fill='%237859CF'/%3E%3C/svg%3E");
+}
+
+/* Hover */
+.form_radio label:hover:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' fill='white' stroke='%239070EC' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='8' fill='%237859CF' fill-opacity='0.25'/%3E%3C/svg%3E%0A");
+}
+
+/* Disabled */
+.form_radio input[type=radio]:disabled+label:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11' stroke='%23E2E2E2' stroke-width='2'/%3E%3C/svg%3E");
+  cursor: default;
+}
+
+/* Disabled + Checked - не смог сделать. В макете такого не рпедставлено, а в стайлгайде такое состояние есть.*/

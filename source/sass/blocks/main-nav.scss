@@ -1,0 +1,117 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+
+  &__logo {
+    display: block;
+    height: auto;
+    margin-right: 60px;
+    flex-shrink: 0;
+    flex-basis: 32px;
+    max-width: 32px;
+
+    @media (min-width: $tablet-width) {
+      flex-basis: 82px;
+      max-width: 82px;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-basis: 170px;
+      max-width: 170px;
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      flex-shrink: 0;
+      text-align: left;
+    }
+  }
+
+  .main-nav__toggle {
+    background-color: $white;
+    border: none;
+  }
+
+  .main-nav__toggle {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--closed &__toggle::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 2px;
+    background-color: $base-black;
+    box-shadow: 0 -5px 0 0 $base-black, 0 5px 0 0 $base-black;
+  }
+
+  &--opened &__toggle::before,
+  &--opened &__toggle::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 2px;
+    background-color: $base-black;
+  }
+
+  &--opened &__toggle::before {
+    transform: rotate(45deg);
+  }
+
+  &--opened &__toggle::after {
+    transform: rotate(-45deg);
+  }
+
+  &__user-nav {
+    margin-left: auto;
+  }
+
+  &__site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: calc(-1 * $container-gap);
+    width: calc(100% + $container-gap);
+
+    .main-nav--opened & {
+      display: block;
+    }
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      position: relative;
+      left: 0;
+    }
+  }
+}
